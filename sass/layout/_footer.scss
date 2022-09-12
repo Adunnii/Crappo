@@ -1,17 +1,30 @@
 .footer {
-    // border: 1px solid red;
     font-size: 1.6rem;
     padding-block-start: 5rem;
-    // width: 100%;
+    width: 100%;
+    text-align: center;
 
     &--top {
         display: grid;
         grid-template-columns: .8fr repeat(2, 25rem) 1fr;
         gap: 3rem;
+        @media screen and (max-width:$l){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
     }
 
     &--list {
         margin-block-start: 3rem;
+        @media screen and (max-width:$l){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &--item {
@@ -25,14 +38,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media screen and (max-width:$l){
+            width: 100%;
+            margin-block-start:3rem ;
+            flex-direction: column;
+           align-content: center;
+           
+        }
     }
 
     &__social {
         display: flex;
         flex-wrap: wrap;
-
         gap: 2rem;
-
+        @media screen and (max-width:$l){
+            margin-block-start: 3rem;
+gap: 4rem;
+        }
         &--icon {
             width: 2rem;
             height: 2rem;
@@ -42,10 +64,15 @@
 }
 
 .payment {
+    &--header{
+    }
     &__method {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         margin-block-start: 5rem;
+        @media screen and (max-width:$l){
+     justify-content: center;
+        }
     }
 }

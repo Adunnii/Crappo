@@ -28,9 +28,11 @@ body {
     border: 2px solid blue;
   }
 }
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 64em) {
   .container {
     border: 2px solid green;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 48em) {
@@ -85,6 +87,10 @@ li {
   list-style: none;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -93,10 +99,11 @@ li {
   font-size: 1.6rem;
   position: relative;
 }
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 64em) {
   .nav {
     flex-direction: column;
     align-items: initial;
+    font-size: 2rem;
   }
 }
 .nav__brand {
@@ -108,18 +115,26 @@ li {
   height: 100%;
 }
 .nav--menu {
+  display: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: calc(100% - 13.5rem);
 }
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 64em) {
   .nav--menu {
+    visibility: hidden;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 }
 .nav__item {
-  width: calc(100% - 15rem);
+  width: 80rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -129,26 +144,40 @@ li {
 }
 @media screen and (max-width: 75em) {
   .nav__item {
-    border: 1px solid red;
-    width: 71.5rem;
+    width: 60rem;
   }
 }
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 64em) {
   .nav__item {
-    border: 1px solid green;
+    justify-content: initial;
     flex-direction: column;
+    width: 100%;
     margin: 0;
-    align-items: initial;
   }
+}
+.nav__auth {
+  display: flex;
+  align-items: center;
+  width: 23.5rem;
+}
+@media screen and (max-width: 64em) {
+  .nav__auth {
+    margin-block-start: 2rem;
+  }
+}
+.nav__auth--login-item {
+  margin-inline: 3rem;
+}
+.nav__auth--register-item {
+  margin-inline-start: 3rem;
 }
 .nav__divide {
   opacity: 20%;
 }
 
 .btn-sm {
-  margin-inline-start: 2rem;
   background-color: #3b82f6;
-  height: 4rem;
+  height: 3rem;
   border-radius: 30px;
   width: 10rem;
 }
@@ -156,8 +185,10 @@ li {
   font-size: 1.6rem;
 }
 
-.toggle {
-  display: none;
+.toggle--icon {
+  position: absolute;
+  top: 10px;
+  right: 3px;
 }
 .toggle--icon, .toggle--icon::before, .toggle--icon::after {
   display: none;
@@ -166,28 +197,63 @@ li {
   height: 3px;
   width: 20px;
 }
+@media screen and (max-width: 64em) {
+  .toggle--icon, .toggle--icon::before, .toggle--icon::after {
+    display: block;
+  }
+}
 .toggle--icon::before {
   content: "";
   position: absolute;
-  top: 53px;
+  top: 5px;
 }
 .toggle--icon::after {
   content: "";
   position: absolute;
-  bottom: 12px;
+  bottom: 5px;
+}
+
+.bg {
+  display: none;
+  opacity: 0;
+  background-color: red;
+  position: fixed;
+  width: 100%;
+  height: 100rem;
+  z-index: 0;
+  top: 0;
+  left: 0;
 }
 
 .footer {
   font-size: 1.6rem;
   padding-block-start: 5rem;
+  width: 100%;
+  text-align: center;
 }
 .footer--top {
   display: grid;
   grid-template-columns: 0.8fr repeat(2, 25rem) 1fr;
   gap: 3rem;
 }
+@media screen and (max-width: 64em) {
+  .footer--top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer--list {
   margin-block-start: 3rem;
+}
+@media screen and (max-width: 64em) {
+  .footer--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .footer--item:not(:first-child) {
   margin-top: 1.5rem;
@@ -198,10 +264,24 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 64em) {
+  .footer--bottom {
+    width: 100%;
+    margin-block-start: 3rem;
+    flex-direction: column;
+    align-content: center;
+  }
+}
 .footer__social {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+@media screen and (max-width: 64em) {
+  .footer__social {
+    margin-block-start: 3rem;
+    gap: 4rem;
+  }
 }
 .footer__social--icon {
   width: 2rem;
@@ -214,6 +294,11 @@ li {
   flex-wrap: wrap;
   gap: 2rem;
   margin-block-start: 5rem;
+}
+@media screen and (max-width: 64em) {
+  .payment__method {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

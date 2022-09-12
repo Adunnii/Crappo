@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%; //10px
+    // overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,9 @@ body {
 
     @media screen and (max-width:$l) {
         border: 2px solid green;
+        width: 90%;
+        margin:  0 auto;
+  
 
     }
 
