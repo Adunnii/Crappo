@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; //10px
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $bgcolor-primary-darkBlue;
+    color: $color-primary-white;
+}
+
+.container {
+    border: 2px solid red;
+    max-width: 120rem;
+    margin: 0 auto;
+
+    @media screen and (max-width:$xl) {
+        max-width: 100rem;
+        margin: 0 auto;
+        border: 2px solid blue;
+
+    }
+
+    @media screen and (max-width:$l) {
+        border: 2px solid green;
+
+    }
+
+    @media screen and (max-width:$m) {
+        border: 2px solid pink;
+
+    }
+
+    @media screen and (max-width:$s) {
+        border: 2px solid yellow;
+
+    }
+}
