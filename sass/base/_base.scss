@@ -31,9 +31,9 @@ body {
 
     @media screen and (max-width:$l) {
         border: 2px solid green;
-        width: 90%;
-        margin:  0 auto;
-  
+        width: 70%;
+        margin: 0 auto;
+
 
     }
 
@@ -44,6 +44,6 @@ body {
 
     @media screen and (max-width:$s) {
         border: 2px solid yellow;
-
+        width: 95%;
     }
 }

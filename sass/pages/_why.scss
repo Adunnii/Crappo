@@ -1,0 +1,33 @@
+.about {
+    margin-block: 5rem 3rem;
+
+    &--item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width:$l) {
+            flex-direction: column;
+            align-content: center;
+            gap: 5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+
+        &--icon {
+            width: 5rem;
+            height: 5rem;
+            background: #4b5563;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+
+        &--content {
+            margin-inline-start: 2rem;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:$l) {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width:$s) {
+        width: 100%;
+    }
+
+    &__content {
+        width: 50rem;
+
+        @media screen and (max-width:$l) {
+            width: 100%;
+        }
+
+        &--info {
+            background-color: $color-primary-grey;
+            padding-block: 1rem;
+            width: max-content;
+            border-radius: 20px;
+            padding-inline: .5rem 1.5rem;
+
+            &-save {
+                padding: .7rem 2rem;
+                border-radius: 20px;
+                color: $color-secondary-grey;
+                background-color: $color-primary-white;
+            }
+
+            &-paragraph {
+                margin-inline-start: 2rem;
+            }
+        }
+
+        &--title {
+            margin-block: 2.5rem 1rem;
+            width: 45rem;
+
+            @media screen and (max-width:$l) {
+                width: 100%;
+            }
+        }
+
+        &--paragraph {
+            width: 40rem;
+
+            @media screen and (max-width:$l) {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    &__btn {
+        width: 17rem;
+        height: 4rem;
+        margin-block-start: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+
+
+
+        &--icon {
+            margin-inline-start: 2rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: $color-primary-white;
+            fill: $color-primary-lightBlue ;
+        }
+    }
+
+    &__image {
+        width: 60rem;
+
+        @media screen and (max-width:$l) {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
