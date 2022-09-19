@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Oxanium:wght@200;400;500;700&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
 *,
 *::before,
 *::after {
@@ -12,25 +13,25 @@ html {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: Oxanium, sans-serif;
     background-color: $bgcolor-primary-darkBlue;
     color: $color-primary-white;
 }
 
 .container {
-    border: 2px solid red;
+    // border: 2px solid red;
     max-width: 120rem;
     margin: 0 auto;
 
     @media screen and (max-width:$xl) {
         max-width: 100rem;
         margin: 0 auto;
-        border: 2px solid blue;
+        // border: 2px solid blue;
 
     }
 
     @media screen and (max-width:$l) {
-        border: 2px solid green;
+        // border: 2px solid green;
         width: 70%;
         margin: 0 auto;
 
@@ -38,12 +39,12 @@ body {
     }
 
     @media screen and (max-width:$m) {
-        border: 2px solid pink;
+        // border: 2px solid pink;
 
     }
 
     @media screen and (max-width:$s) {
-        border: 2px solid yellow;
+        // border: 2px solid yellow;
         width: 95%;
     }
 }
